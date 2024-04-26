@@ -35,7 +35,7 @@ export default function Menu() {
                                         </h1>
                                     </div>
 
-                                    <div className="w-full grid grid-cols-2 gap-12">
+                                    <div className="w-full grid grid-cols-2 gap-16">
                                         <div className="col-span-1">
                                             <img
                                                 src={category.image}
@@ -43,26 +43,30 @@ export default function Menu() {
                                             />
                                         </div>
 
-                                        <ul className={`${montserrat.className} col-span-1 flex flex-col items-start justify-start space-y-8`}>
+                                        <ul className={`${montserrat.className} col-span-1 flex flex-col items-start justify-start`}>
                                             {menu.items.filter(item => item.category == category.name).map((item, idx) => {
                                                 return (
                                                     <li
                                                         key={idx}
-                                                        className="w-full flex flex-row items-center justify-start border-b-2 border-dashed border-orange-950 pb-4"
+                                                        className={`w-full flex flex-row items-start justify-start border-b-2 border-dashed border-orange-950 ${idx > 0 ? `py-8` : `pb-8`}`}
                                                     >
-                                                        <div className="grow flex flex-col items-end justify-end space-y-2">
-                                                            <p className="grow text-right text-lg text-orange-950 font-normal">
+                                                        <div className="flex flex-col grow items-start justify-start">
+                                                            <p className="text-left text-lg text-orange-950 font-medium">
                                                                 {item.name}
                                                             </p>
-                                                            <p>
-                                                                {item.description}
-                                                            </p>
+
+                                                            {item.description &&
+                                                                <p className="text-left text-lg text-orange-950 font-light">
+                                                                    {item.description}
+                                                                </p>
+                                                            }
                                                         </div>
-                                                        <p className="text-right text-lg text-orange-950 font-normal">
+
+                                                        <p className="text-right text-lg text-orange-950 font-light">
                                                             {item.price}
                                                         </p>
                                                     </li>
-                                                )
+                                                );
                                             })}
                                         </ul>
                                     </div>
@@ -78,27 +82,31 @@ export default function Menu() {
                                         </h1>
                                     </div>
 
-                                    <div className="w-full grid grid-cols-2 gap-12">
-                                        <ul className={`${montserrat.className} col-span-1 flex flex-col items-start justify-start space-y-8`}>
+                                    <div className="w-full grid grid-cols-2 gap-16">
+                                        <ul className={`${montserrat.className} col-span-1 flex flex-col items-start justify-start`}>
                                             {menu.items.filter(item => item.category == category.name).map((item, idx) => {
                                                 return (
                                                     <li
                                                         key={idx}
-                                                        className="w-full flex flex-row items-start border-b-2 border-dashed border-orange-950 pb-4"
+                                                        className={`w-full flex flex-row items-start justify-start border-b-2 border-dashed border-orange-950 ${idx > 0 ? `py-8` : `pb-8`}`}
                                                     >
-                                                        <p className="text-left text-lg text-orange-950 font-normal">
+                                                        <p className="text-left text-lg text-orange-950 font-light">
                                                             {item.price}
                                                         </p>
-                                                        <div className="grow flex flex-col items-end justify-end space-y-2">
-                                                            <p className="grow text-right text-lg text-orange-950 font-normal">
+
+                                                        <div className="flex flex-col grow items-end justify-end">
+                                                            <p className="text-right text-lg text-orange-950 font-medium">
                                                                 {item.name}
                                                             </p>
-                                                            <p>
-                                                                {item.description}
-                                                            </p>
+
+                                                            {item.description &&
+                                                                <p className="text-right text-lg text-orange-950 font-light">
+                                                                    {item.description}
+                                                                </p>
+                                                            }
                                                         </div>
                                                     </li>
-                                                )
+                                                );
                                             })}
                                         </ul>
 
