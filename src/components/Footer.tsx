@@ -1,12 +1,60 @@
 import { socialLinks } from "@/lib/utilities";
-import { Bungee, Montserrat } from "next/font/google";
+import { Bungee, Montserrat, Gochi_Hand } from "next/font/google";
 
 const bungee = Bungee({ subsets: ["latin"], weight: "400" });
 const montserrat = Montserrat({ subsets: ["cyrillic"] });
+const gochi = Gochi_Hand({ subsets: ["latin"], weight: "400" })
 
 export default function Footer() {
     return (
         <footer className="w-full pt-0">
+
+            <div className="w-full pt-48">
+                <div className="relative w-full flex flex-row items-center justify-start bg-yellow-400 pb-14 pt-20 -space-x-2">
+                    <div className="absolute -top-20 w-full flex flex-row items-center justify-center">
+                        <div className="bg-rose text-white bg-orange-950 px-12 py-4 rounded-3xl">
+                            <h1 className={`${gochi.className} text-center text-7xl text-white`}>@joythaialhambra</h1>
+                        </div>
+
+
+                    </div>
+                    <img
+                        src="https://images.pexels.com/photos/175754/pexels-photo-175754.jpeg"
+                        className="w-64 h-64 object-cover rounded-3xl border-8 border-white rotate-12"
+                    />
+
+                    <img
+                        src="https://images.pexels.com/photos/12561886/pexels-photo-12561886.jpeg"
+                        className="w-64 h-64 object-cover rounded-3xl border-8 border-orange-950 -rotate-12"
+                    />
+
+                    <img
+                        src="https://images.pexels.com/photos/1234535/pexels-photo-1234535.jpeg"
+                        className="w-64 h-64 object-cover rounded-3xl border-8 border-white rotate-12"
+                    />
+
+                    <img
+                        src="https://images.pexels.com/photos/723198/pexels-photo-723198.jpeg"
+                        className="w-64 h-64 object-cover rounded-3xl border-8 border-orange-950  -rotate-12"
+                    />
+
+                    <img
+                        src="https://images.pexels.com/photos/1234535/pexels-photo-1234535.jpeg"
+                        className="w-64 h-64 object-cover rounded-3xl border-8 border-white rotate-12"
+                    />
+
+                    <img
+                        src="https://images.pexels.com/photos/12561886/pexels-photo-12561886.jpeg"
+                        className="w-64 h-64 object-cover rounded-3xl border-8 border-orange-950 -rotate-12"
+                    />
+                </div>
+                {/* https://images.pexels.com/photos/175754/pexels-photo-175754.jpeg?auto=compress&cs=tinysrgb&w=600
+                https://images.pexels.com/photos/723198/pexels-photo-723198.jpeg?auto=compress&cs=tinysrgb&w=600
+                https://images.pexels.com/photos/1731535/pexels-photo-1731535.jpeg?auto=compress&cs=tinysrgb&w=600
+                https://images.pexels.com/photos/1234535/pexels-photo-1234535.jpeg?auto=compress&cs=tinysrgb&w=600
+                https://images.pexels.com/photos/12561886/pexels-photo-12561886.jpeg?auto=compress&cs=tinysrgb&w=600 */}
+            </div>
+
             <div className="w-full bg-orange-950 py-20">
                 <div className="max-w-6xl mx-auto flex flex-col items-start justify-start space-y-14">
 

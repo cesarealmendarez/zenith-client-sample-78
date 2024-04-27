@@ -16,7 +16,7 @@ export default function NavigationBar() {
 
 
     return (
-        <nav className={`${bungee.className} max-w-7xl mx-auto pt-20`}>
+        <nav className={`${bungee.className} max-w-7xl mx-auto pt-24`}>
             <div className="w-full flex flex-row items-center">
                 <div className="flex flex-row items-center justify-start space-x-0">
                     <a
@@ -37,7 +37,7 @@ export default function NavigationBar() {
                     {navigationBarLinks.map((link, idx) => {
                         return (
                             <li key={idx}>
-                                <button
+                                {/* <button
                                     // shallow={true}
                                     // href={link.href}
                                     // target={link.target}
@@ -48,7 +48,7 @@ export default function NavigationBar() {
 
                                         setTimeout(() => {
                                             const element = document.getElementById("about")
-                                            element?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+                                            element?.scrollIntoView({ behavior: "smooth" });
                                         }, 500);
                                     }}
                                     className="flex flex-row item-center justify-center px-6 py-2 border-2 border-solid border-orange-950 rounded-3xl transition-all"
@@ -56,8 +56,8 @@ export default function NavigationBar() {
                                     <p className="text-center text-lg text-orange-950 font-normal">
                                         About
                                     </p>
-                                </button>
-                                {/* <>
+                                </button> */}
+                                <>
                                     {link.type == "bold" ?
                                         <a
                                             href={link.href}
@@ -102,7 +102,7 @@ export default function NavigationBar() {
                                             }
                                         </>
                                     }
-                                </> */}
+                                </>
                             </li>
                         );
                     })}
