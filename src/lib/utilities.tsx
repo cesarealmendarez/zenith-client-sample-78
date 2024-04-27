@@ -1,31 +1,38 @@
+import { CookingPot } from "lucide-react";
+import { FaFacebook, FaInstagram, FaSnapchat, FaYelp } from "react-icons/fa";
+
 export const navigationBarLinks = [
     {
         id: 0,
         name: "Menu",
         href: "/menu",
         target: "_self",
-        type: "simple"
+        type: "simple",
+        icon: null
     },
     {
         id: 1,
         name: "Our Story",
         href: "/about",
         target: "_self",
-        type: "simple"
+        type: "simple",
+        icon: null
     },
     {
         id: 2,
         name: "Reviews",
         href: "/reviews",
         target: "_self",
-        type: "simple"
+        type: "simple",
+        icon: null
     },
     {
         id: 3,
         name: "Place Order",
         href: "#",
         target: "_self",
-        type: "bold"
+        type: "bold",
+        icon: <CookingPot className="text-white" />
     }
 ];
 
@@ -226,3 +233,26 @@ export const menu = {
         }
     ]
 };
+
+export const socialLinks = [
+    {
+        id: 0,
+        href: "#",
+        icon: <FaInstagram />
+    },
+    {
+        id: 1,
+        href: "#",
+        icon: <FaYelp />
+    },
+    {
+        id: 2,
+        href: "#",
+        icon: <FaFacebook />
+    },
+    {
+        id: 3,
+        href: "#",
+        icon: <FaSnapchat />
+    }
+];
