@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { Bungee } from "next/font/google";
 import { navigationBarLinks } from "@/lib/utilities";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { CookingPot } from "lucide-react";
 
 const bungee = Bungee({ subsets: ["latin"], weight: "400" });
@@ -12,6 +12,8 @@ const bungee = Bungee({ subsets: ["latin"], weight: "400" });
 export default function NavigationBar() {
 
     const pathname = usePathname();
+    const router = useRouter();
+
 
     return (
         <nav className={`${bungee.className} max-w-7xl mx-auto pt-20`}>
@@ -20,10 +22,14 @@ export default function NavigationBar() {
                     <a
                         href="/"
                         target="_self"
+                        className="flex flex-col items-start justify-start"
                     >
                         <h1 className="text-left text-4xl text-orange-950 font-normal">
                             Joy Thai
                         </h1>
+                        {/* <h1 className="text-left text-xl text-red-500 font-normal">
+                            Alhambra
+                        </h1> */}
                     </a>
                 </div>
 
@@ -31,7 +37,27 @@ export default function NavigationBar() {
                     {navigationBarLinks.map((link, idx) => {
                         return (
                             <li key={idx}>
-                                <>
+                                <button
+                                    // shallow={true}
+                                    // href={link.href}
+                                    // target={link.target}
+                                    onClick={() => {
+                                        // const element = document.getElementById("about")
+                                        // element?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+                                        router.push("/")
+
+                                        setTimeout(() => {
+                                            const element = document.getElementById("about")
+                                            element?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+                                        }, 500);
+                                    }}
+                                    className="flex flex-row item-center justify-center px-6 py-2 border-2 border-solid border-orange-950 rounded-3xl transition-all"
+                                >
+                                    <p className="text-center text-lg text-orange-950 font-normal">
+                                        About
+                                    </p>
+                                </button>
+                                {/* <>
                                     {link.type == "bold" ?
                                         <a
                                             href={link.href}
@@ -76,7 +102,7 @@ export default function NavigationBar() {
                                             }
                                         </>
                                     }
-                                </>
+                                </> */}
                             </li>
                         );
                     })}

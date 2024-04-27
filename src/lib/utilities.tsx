@@ -13,7 +13,7 @@ export const navigationBarLinks = [
     {
         id: 1,
         name: "Our Story",
-        href: "/about",
+        href: "#about",
         target: "_self",
         type: "simple",
         icon: null

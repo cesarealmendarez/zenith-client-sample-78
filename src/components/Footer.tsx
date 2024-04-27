@@ -7,13 +7,35 @@ const montserrat = Montserrat({ subsets: ["cyrillic"] });
 export default function Footer() {
     return (
         <footer className="w-full pt-0">
-            <div className="w-full bg-red-500 py-20">
+            <div className="w-full bg-orange-950 py-20">
                 <div className="max-w-6xl mx-auto flex flex-col items-start justify-start space-y-14">
+
+                    {/* <div className="w-full grid grid-cols-3 bg-[#f0eada] rounded-3xl px-8 py-10">
+                        <div className="col-span-1 flex flex-col items-center justify-start">
+                            <p className={`${bungee.className} text-left text-2xl text-orange-950`}>
+                                Subscribe to our newsletter to stay up to date with everything Joy Thai!
+                            </p>
+                        </div>
+
+                        <div className="col-span-2 flex flex-col items-end justify-start space-y-4">
+                            <h1 className={`${bungee.className} text-left text-2xl text-red-500`}>
+                                EMAIL ADDRESS
+                            </h1>
+
+                            <input className="w-72 flex flex-row items-center justify-end text-right text-base text-red-500 placeholder:text-red-500 font-normal px-4 py-4 bg-transparent border-2 border-solid border-orange-500 rounded-xl outline-none" placeholder="Email" />
+
+                            <button className="w-72 flex flex-row items-center justify-center px-10 py-2 rounded-3xl bg-red-500">
+                                <p className={`${bungee.className} text-center text-lg text-white font-normal`}>
+                                    keep me posted!
+                                </p>
+                            </button>
+                        </div>
+                    </div> */}
 
                     <div className="w-full grid grid-cols-2">
                         <div className="col-span-1 flex flex-row items-center justify-start">
                             <h1 className={`${bungee.className} text-left text-5xl text-white font-normal`}>
-                                Connect with Us:
+                                Follow Us:
                             </h1>
                         </div>
 
