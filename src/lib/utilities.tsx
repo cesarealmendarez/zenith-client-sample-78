@@ -256,3 +256,24 @@ export const socialLinks = [
         icon: <FaSnapchat />
     }
 ];
+
+export const reviews: Review[] = [
+    {
+        id: 0,
+        reviewer: "Cesar Almendarez",
+        location: "Alhambra, CA",
+        review: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    },
+    {
+        id: 1,
+        reviewer: "John Doe",
+        location: "Los Angeles, CA",
+        review: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    },
+    {
+        id: 2,
+        reviewer: "Ray Dalio",
+        location: "Pasadena, CA",
+        review: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+    },
+]
